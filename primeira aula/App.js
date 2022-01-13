@@ -3,15 +3,13 @@ import contadorReducer from './reducers/contadorReducer';
 import Cabecalho from './componentes/Cabecalho'
 import Contador from './componentes/Contador'
 import './App.css';
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
 
-  const allReducers = combineReducers({ counter: contadorReducer })
-
-  const store = createStore(allReducers); 
+  const store = createStore(contadorReducer); 
 
   return (
     <div className="App">
